@@ -15,7 +15,11 @@
         socket.emit('message', { name: 'Juan Manuel' });
         socket.on('message', function(payload) {
             console.log('Listening: ', payload);
-        })
+        });
+        socket.on('active-bands', function(payload) {
+            console.clear();
+            console.table(payload);
+        });
     </script>
 </body>
 </html>
